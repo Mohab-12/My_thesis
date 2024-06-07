@@ -1,0 +1,17 @@
+importlib-metadata==5.2.0
+ipykernel==6.17.0
+ipython==8.6.0
+ipython-genutils==0.2.0
+ipywidgets==7.7.2
+matplotlib==3.7.0
+matplotlib-inline==0.1.6
+notebook==6.5.2
+notebook_shim==0.2.2
+numpy==1.23.4
+openpyxl==3.1.0
+pandas==1.5.1
+plotly==5.11.0
+python-dateutil==2.8.2
+seaborn==0.12.1
+streamlit==0.81.0
+
