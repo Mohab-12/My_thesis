@@ -30,7 +30,7 @@ header = st.container()
 # header = st.beta_container()
 # header = st.beta_container()
 with header:
-    st.title("Temperature profiles in a condesing heat exchanger")
+    st.title("Heat and mass transfer processes in a condensing heat exchanger")
 
 RE = st.selectbox("Enter a value for Reynolds number:",(3000,5000,10000))
 
