@@ -562,10 +562,13 @@ fig1.update_layout(
     xaxis_title="Local point",
     yaxis_title="Temperature (°C)",
     legend=dict(yanchor="top",
-        y=-0.2,
+        y=-0.3,
         xanchor="center",
-        ncols=4,
-        x=0.5),
+        x=0.5,
+        orientation="h",
+        traceorder="normal",
+        title_text="Legend",
+        itemsizing="constant"),
     showlegend=True
 )
 
