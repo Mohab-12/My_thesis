@@ -645,8 +645,8 @@ fig3 = go.Figure(data=[trace], layout=layout)
 # Set the figure size
 fig3.update_layout(
     autosize=False,
-    width=400,  # Adjust this value for the desired width
-    height=300  # Adjust this value for the desired height
+    width=500,  # Adjust this value for the desired width
+    height=400  # Adjust this value for the desired height
 )
 
 
