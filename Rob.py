@@ -525,6 +525,15 @@ Nusselt = df1.loc[e,['First_Nusselt',
  'Seventh_Nusselt',
  'Eighth_Nusselt']]
 
+Nusselt_conv = df2.loc[e,['Nusselt_1',
+ 'Nusselt_2',
+ 'Nusselt_3',
+ 'Nusselt_4',
+ 'Nusselt_5',
+ 'Nusselt_6',
+ 'Nusselt_7',
+ 'Nusselt_8']]
+
 Condensation_rate = df1.loc[e,['First_Cond',
  'Second_Cond',
  'Third_Cond',
@@ -564,13 +573,13 @@ col1.write(fig1)
 
 fig2= go.Figure()
 
-fig2.add_trace(go.Scatter(x=numbering, y=Nusselt, mode='lines+markers', name='Overall Nussekt number', line=dict(color='blue')))
-
+fig2.add_trace(go.Scatter(x=numbering, y=Nusselt, mode='lines+markers', name='Overall Nusselt number', line=dict(color='blue')))
+fig2.add_trace(go.Scatter(x=numbering, y=Nusselt_conv, mode='lines+markers', name='Convective Nusselt number', line=dict(color='orange')))
 
 fig2.update_layout(
     title="Overall Nusselt number",
     xaxis_title="Local point",
-    yaxis_title="Nussekt number",
+    yaxis_title="Nusselt number",
     legend=dict(x=1.02, y=0.765),
     showlegend=True
 )
@@ -673,7 +682,8 @@ data = {
     'Cooling_water': Cooling_water.values,
     'Wall_temp': Wall_temp.values,
     'Dew_point': dew_point.values,
-    'Nusselt' : Nusselt.values
+    'Nusselt' : Nusselt.values,
+    'Convective Nusselt': Nusselt_conv.values
 }
 
 combined_df = pd.DataFrame(data, index=Humid_air.index)
