@@ -640,6 +640,12 @@ layout = go.Layout(
     ) # Enable grid lines
 )
 
+fig3.update_layout(
+    autosize=False,
+    width=400,  # Adjust this value for the desired width
+    height=300  # Adjust this value for the desired height
+)
+
 # Create the figure
 fig3 = go.Figure(data=[trace], layout=layout)
 
