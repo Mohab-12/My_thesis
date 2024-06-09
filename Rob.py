@@ -564,6 +564,7 @@ fig1.update_layout(
     legend=dict(yanchor="top",
         y=-0.2,
         xanchor="center",
+        ncols=4,
         x=0.5),
     showlegend=True
 )
