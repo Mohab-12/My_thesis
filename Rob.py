@@ -561,13 +561,16 @@ fig1.update_layout(
     title="Temperature Profiles",
     xaxis_title="Local point",
     yaxis_title="Temperature (°C)",
-    legend=dict(yanchor="top",
+    legend=dict(
+        yanchor="top",
         y=-0.2,
         xanchor="center",
         x=0.5,
         orientation="h",
         traceorder="normal",
         title_text=""
+    ),
+    showlegend=True
 )
 
 col1.write(fig1)
