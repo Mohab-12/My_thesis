@@ -547,7 +547,7 @@ Condensation_rate = df1.loc[e,['First_Cond',
 # In[6]:
 
 
-col1, col2= st.columns([1, 10])
+col1, col2= st.columns([-1, 20])
 fig1= go.Figure()
 
 fig1.add_trace(go.Scatter(x=numbering, y=Temperature_interface, mode='lines+markers', name='Temperature_interface', line=dict(color='blue')))
