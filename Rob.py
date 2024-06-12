@@ -698,6 +698,7 @@ data = {
     'Cooling_water': Cooling_water.values,
     'Wall_temp': Wall_temp.values,
     'Dew_point': dew_point.values,
+    'Interfacial temperature':Temperature_interface ,
     'Nusselt' : Nusselt.values,
     'Convective Nusselt': Nusselt_conv.values
 }
