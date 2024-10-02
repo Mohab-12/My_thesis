@@ -45,16 +45,20 @@ def parameters(RE, MF, T, RF):
     return df1.query("`Re` == @RE & `Mass Fraction` == @MF & `Mixture tin, oC` == @T & `Ratio of water/mixture flow rates` == @RF")
 
 result = parameters(RE, MF, T, RF)
-if result.shape[0]>1:
-    st.write("The number of system with the chosen condition is ",np.round(result.shape[0],1))
-    e = st.slider(
-        "Choose system number",
-        0.0, np.round(result.shape[0],1),0)
-    st.write("Values:", e)
-elif result.shape[0]==1:
-    e=result.shape[0]
-elif result.shape[0]==0:
-    st.write("There is no system with these parameters")
+if result.shape[0] > 1:
+    st.write(f"The number of systems matching the chosen conditions: {result.shape[0]}")
+    # Slider to select a specific row if multiple results are returned
+    selected_index = st.slider("Choose system number", 0, result.shape[0]-1, 0)
+    # Display the selected system
+    st.write("Selected System Values:")
+    st.write(result.iloc[selected_index])
+elif result.shape[0] == 1:
+    # If only one result, display it directly
+    st.write("Only one system matches the chosen conditions:")
+    st.write(result)
+else:
+    # If no results, display a message
+    st.write("No system matches the selected parameters.")
     st.stop()
 
 
