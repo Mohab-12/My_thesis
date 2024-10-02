@@ -51,7 +51,7 @@ if result.shape[0] > 1:
     selected_index = st.slider("Choose system number", 0, result.shape[0]-1, 0)
     # Display the selected system
     st.write("Selected System Values:")
-    st.write(result.iloc[selected_index])
+    st.write(result.index[selected_index])
 elif result.shape[0] == 1:
     # If only one result, display it directly
     st.write("Only one system matches the chosen conditions:")
