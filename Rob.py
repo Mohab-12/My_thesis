@@ -49,13 +49,14 @@ if result.shape[0] > 1:
     st.write(f"The number of systems matching the chosen conditions: {result.shape[0]}")
     # Slider to select a specific row if multiple results are returned
     selected_index = st.slider("Choose system number", 0, result.shape[0]-1, 0)
+    e = result.index(selected_index)
     # Display the selected system
     st.write("Selected System Values:")
     st.write(result.index[selected_index])
 elif result.shape[0] == 1:
     # If only one result, display it directly
     st.write("Only one system matches the chosen conditions:")
-    st.write(result)
+    e=result.shape[0]
 else:
     # If no results, display a message
     st.write("No system matches the selected parameters.")
